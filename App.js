@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Navi } from "./src/infrastructure/navigation";
 
+
+const Tab = createBottomTabNavigator();
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+
+     <RestaurantsContextProvider>
+     <Navi />
+     </RestaurantsContextProvider>
+     <ExpoStatusBar style="auto" />
+    
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
