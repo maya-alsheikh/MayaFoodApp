@@ -1,4 +1,4 @@
-import React , {useContext , useEffect , useState}from 'react';
+import React from 'react';
 import MapView from 'react-native-maps';
 import { Searchbar } from 'react-native-paper';
 

@@ -1,5 +1,5 @@
-import React , {useContext}from 'react';
-import { StatusBar, StyleSheet, SafeAreaView, Text, View ,FlatList, TouchableOpacity } from "react-native";
+import React , { useContext } from 'react';
+import { StatusBar, StyleSheet, SafeAreaView, View ,FlatList, TouchableOpacity } from "react-native";
 import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
 import { RestaurantsContext } from '../../../services/restaurants/restaurants.context';
 import { Searchbar } from "react-native-paper";
@@ -7,7 +7,7 @@ import { Searchbar } from "react-native-paper";
 
 
 export const RestaurantsScreen = ( {navigation} ) => {
-  const {isLoading , error , restaurants} = useContext(RestaurantsContext);
+  const {restaurants} = useContext(RestaurantsContext);
   return(
     <>
     <SafeAreaView style={styles.container}>
@@ -15,7 +15,6 @@ export const RestaurantsScreen = ( {navigation} ) => {
     <View style={{paddingBottom:10}}>
       <Searchbar
         placeholder="Search for a location"
-        
       />
     </View>
     

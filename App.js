@@ -9,12 +9,10 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <>
-
      <RestaurantsContextProvider>
      <Navi />
      </RestaurantsContextProvider>
      <ExpoStatusBar style="auto" />
-    
     </>
   );
 }
